@@ -1,0 +1,33 @@
+.border-1px ( @color  ) {
+  position: relative;
+  &:after{
+    display: block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    border-top: 1px solid @color;
+    content: '';
+  }
+}
+.border-none{
+  &:after{
+    border-top: none;
+  }
+}
+.bg-url( @url ){
+  background: url("@{url}@2x.png");
+}
+  @media (min-device-pixel-ratio: 2.0),(-webkit-device-pixel-ratio: 2.0){
+    .bg-url( @url ){
+      background: url("@{url}@2x.png");
+    }
+  }
+  @media (min-device-pixel-ratio: 3.0),(-webkit-device-pixel-ratio: 3.0){
+    .bg-url( @url ){
+      background: url("@{url}@3x.png");
+    }
+  }
+
+
+
