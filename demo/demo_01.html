@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.bootcss.com/fullPage.js/2.9.5/jquery.fullpage.css" rel="stylesheet">
+</head>
+<body>
+<div id="fullpage">
+    <div class="section">第一屏</div>
+    <div class="section">第二屏</div>
+    <div class="section">第三屏</div>
+</div>
+<ul id="menu">
+    <li data-menuanchor='page1' class="active">
+        <a href="#page1">第一页</a>
+    </li>
+    <li data-menuanchor='page2'>
+        <a href="#page2">第二页</a>
+    </li>
+    <li data-menuanchor='page3'>
+        <a href="#page3">第三页</a>
+    </li>
+</ul>
+
+
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/fullPage.js/2.9.5/jquery.fullpage.js"></script>
+<script type="text/javascript">
+</script>
+<script>
+    $(function() {
+        $('#fullpage').fullpage({
+            sectionsColor: ['#f00', '#fff', '#f4f5f7'],
+            anchors: ['page1', 'page2', 'page3'],
+            menu: '#menu',
+            scrollingSpeed: 1000,
+        });
+    });
+</script>
+</body>
+</html>
